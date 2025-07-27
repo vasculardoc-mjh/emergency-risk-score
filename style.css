@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  max-width: 480px;
+  margin: auto;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
