@@ -1,0 +1,9 @@
+References – Emergency Surgery Risk Score Tool
+
+1. Joseph B, et al. Frailty in Surgery: A Review. JAMA Surg. 2014;149(3):224–229.
+2. Lee TH, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-9.
+3. National Emergency Laparotomy Audit (NELA). 4th Report (2020).
+4. The American College of Surgeons NSQIP Surgical Risk Calculator (2023).
+5. Ng-Kamstra JS, et al. Global surgery 2030: evidence and solutions for achieving health, welfare and economic development. Lancet. 2015;386(9993):569–624.
+6. Alana E, et al. Surgical outcomes for Indigenous populations in Australia, Canada, New Zealand, and the USA: A systematic review. Lancet Global Health. 2021;9(2):e209-e222.
+7. Walsh M, et al. The impact of multiple hospital admissions on surgical outcomes: A retrospective analysis. BMJ Open. 2018;8:e021784.
