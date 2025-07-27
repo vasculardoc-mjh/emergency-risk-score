@@ -12,10 +12,10 @@ const weights = {
 };
 
 const riskLevels = [
-  { max: 2, label: 'Low', color: 'green' },
-  { max: 5, label: 'Moderate', color: 'orange' },
-  { max: 8, label: 'High', color: 'darkorange' },
-  { max: 99, label: 'Extreme', color: 'red' }
+  { max: 2, label: 'Low (0–2)', color: 'green' },
+  { max: 5, label: 'Moderate (3–5)', color: 'orange' },
+  { max: 8, label: 'High (6–8)', color: 'darkorange' },
+  { max: 99, label: 'Extreme (9–13)', color: 'red' }
 ];
 
 function renderApp() {
@@ -26,6 +26,12 @@ function renderApp() {
   const title = document.createElement('h2');
   title.textContent = 'Emergency Surgery Risk Score';
   container.appendChild(title);
+
+  const description = document.createElement('p');
+  description.innerHTML = 'Select risk factors below. Score ranges:<br>' +
+    '<strong>Low</strong>: 0–2, <strong>Moderate</strong>: 3–5, ' +
+    '<strong>High</strong>: 6–8, <strong>Extreme</strong>: 9–13';
+  container.appendChild(description);
 
   const form = document.createElement('div');
   form.className = 'card';
