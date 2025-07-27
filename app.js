@@ -6,7 +6,9 @@ const weights = {
   albumin: 2,
   lactate: 3,
   anemia: 1,
-  renal: 2
+  renal: 2,
+  aboriginal: 1,
+  admissions: 0
 };
 
 const riskLevels = [
@@ -18,6 +20,8 @@ const riskLevels = [
 
 function renderApp() {
   const container = document.createElement('div');
+  const state = {};
+  let score = 0;
 
   const title = document.createElement('h2');
   title.textContent = 'Emergency Surgery Risk Score';
@@ -26,10 +30,8 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const state = {};
-  let score = 0;
-
-  Object.keys(weights).forEach((key) => {
+  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anemia', 'renal', 'aboriginal'];
+  factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
     row.style.justifyContent = 'space-between';
@@ -49,6 +51,26 @@ function renderApp() {
     form.appendChild(row);
   });
 
+  const admissionsRow = document.createElement('div');
+  admissionsRow.style.marginBottom = '0.5rem';
+
+  const admissionsLabel = document.createElement('label');
+  admissionsLabel.textContent = 'Hospital Admissions (past 12 mo): ';
+  admissionsLabel.style.marginRight = '0.5rem';
+
+  const admissionsInput = document.createElement('input');
+  admissionsInput.type = 'number';
+  admissionsInput.min = 0;
+  admissionsInput.value = 0;
+  admissionsInput.oninput = () => {
+    const val = parseInt(admissionsInput.value, 10);
+    weights.admissions = val >= 4 ? 2 : val >= 2 ? 1 : 0;
+  };
+
+  admissionsRow.appendChild(admissionsLabel);
+  admissionsRow.appendChild(admissionsInput);
+  form.appendChild(admissionsRow);
+
   const button = document.createElement('button');
   button.textContent = 'Calculate Score';
   button.onclick = () => {
@@ -56,8 +78,9 @@ function renderApp() {
     for (const key in state) {
       if (state[key]) score += weights[key];
     }
+    score += weights.admissions;
     const risk = riskLevels.find(r => score <= r.max);
-    result.textContent = `Score: ${score}/11 | Risk: ${risk.label}`;
+    result.textContent = `Score: ${score}/13 | Risk: ${risk.label}`;
     result.style.color = risk.color;
   };
 
@@ -68,7 +91,6 @@ function renderApp() {
   container.appendChild(form);
   container.appendChild(button);
   container.appendChild(result);
-
   root.appendChild(container);
 }
 

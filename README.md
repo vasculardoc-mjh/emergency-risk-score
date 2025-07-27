@@ -1,25 +1,25 @@
-# Emergency Surgery Risk Score
+# Emergency Surgery Risk Score (Enhanced)
 
-A simple static web app to calculate emergency surgical risk using validated comorbidity markers.
+A static web app to calculate surgical risk including:
+- Age, Frailty, Albumin, Lactate, Anemia, Renal function
+- NEW: Aboriginal identity and hospital admissions (last 12 months)
 
-## Features
+## Use
+Open `index.html` in a browser or deploy via Netlify/GitHub Pages.
 
-- Select risk factors (age, frailty, lactate, etc.)
-- Real-time scoring and risk level
-- Mobile-optimized and easily deployed
+## Scoring
 
-## How to Use
-
-Open `index.html` in any browser or host via Netlify, GitHub Pages, Vercel, etc.
-
-## Risk Scoring Weights
-
-- Age >75 = 1
-- Frailty >=6 = 2
-- Albumin <3.0 = 2
-- Lactate >4 or pH <7.3 = 3
-- Hemoglobin <8 = 1
-- Renal dysfunction = 2
+| Factor                | Points |
+|-----------------------|--------|
+| Age >75               | 1      |
+| Frailty >=6           | 2      |
+| Albumin <3.0          | 2      |
+| Lactate >4 / pH <7.3  | 3      |
+| Hemoglobin <8         | 1      |
+| Renal Dysfunction     | 2      |
+| Aboriginal/Indigenous | 1      |
+| 2–3 Admissions         | 1      |
+| 4+ Admissions          | 2      |
 
 ## License
 
