@@ -1,4 +1,4 @@
-# Emergency Surgery Risk Score (Detailed)
+# Emergency Surgery Assessment Checklist
 
 A static web app to estimate emergency surgical risk based on validated and expert-derived criteria.
 
@@ -12,7 +12,7 @@ A static web app to estimate emergency surgical risk based on validated and expe
 | Lactate / pH           | Lactate > 4 mmol/L or pH < 7.3   | 3      |
 | Anemia                 | Hemoglobin < 8 g/dL              | 1      |
 | Renal Dysfunction      | eGFR < 30 mL/min/1.73 m²         | 2      |
-| Aboriginal Identity    | Self-identified Aboriginal/Torres Strait Islander | 1 |
+| First Nations Status   | Self-identified First Nations person | 1   |
 | Hospital Admissions    | 2–3 admissions = 1 pt; 4+ = 2 pts (in last 12 mo) | 1–2 |
 
 ## Risk Interpretation

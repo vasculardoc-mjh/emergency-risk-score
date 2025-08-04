@@ -7,7 +7,7 @@ const weights = {
   lactate: 3,
   anemia: 1,
   renal: 2,
-  aboriginal: 1,
+  firstnations: 1,
   admissions: 0
 };
 
@@ -24,7 +24,7 @@ function renderApp() {
   let score = 0;
 
   const title = document.createElement('h2');
-  title.textContent = 'Emergency Surgery Risk Score';
+  title.textContent = 'Emergency Surgery Assessment Checklist';
   container.appendChild(title);
 
   const description = document.createElement('p');
@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anemia', 'renal', 'aboriginal'];
+  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anemia', 'renal', 'firstnations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
@@ -44,7 +44,7 @@ function renderApp() {
     row.style.marginBottom = '0.5rem';
 
     const label = document.createElement('label');
-    label.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+    label.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace('firstnations', 'First Nations Status');
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
