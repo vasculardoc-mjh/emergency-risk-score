@@ -1,13 +1,13 @@
 const root = document.getElementById('root');
 
 const weights = {
-  age >75: 1,
-  frailty CFS >5: 2,
-  albumin <30: 2,
-  lactate >4 pH <7.3: 3,
-  anaemia Hb <80: 1,
-  renal eGFR <30: 2,
-  first nations: 1,
+  age: 1,
+  frailty: 2,
+  albumin: 2,
+  lactate: 3,
+  anemia: 1,
+  renal: 2,
+  firstnations: 1,
   admissions: 0
 };
 
@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age >75', 'frailty CFS >5', 'albumin <30', 'lactate >4 pH <7.3', 'anaemia Hb <80', 'renal GFR <30', 'first nations'];
+  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anemia', 'renal', 'firstnations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
@@ -44,7 +44,7 @@ function renderApp() {
     row.style.marginBottom = '0.5rem';
 
     const label = document.createElement('label');
-    label.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace('first nations', 'First Nations Status');
+    label.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace('firstnations', 'First Nations Status');
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
