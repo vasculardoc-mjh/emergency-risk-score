@@ -7,7 +7,7 @@ const weights = {
   lactate: 3,
   anaemia: 1,
   renal: 2,
-  first nations: 1,
+  firstnations: 1,
   admissions: 0
 };
 
@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anaemia', 'renal', 'first nations'];
+  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anaemia', 'renal', 'firstnations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
