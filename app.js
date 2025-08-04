@@ -1,13 +1,13 @@
 const root = document.getElementById('root');
 
 const weights = {
-  age: 1,
-  frailty: 2,
-  albumin: 2,
-  lactate: 3,
-  anemia: 1,
-  renal: 2,
-  firstnations: 1,
+  age >75: 1,
+  frailty CFS >5: 2,
+  albumin <30: 2,
+  lactate >4 pH <7.3: 3,
+  anaemia Hb <80: 1,
+  renal eGFR <30: 2,
+  first nations: 1,
   admissions: 0
 };
 
@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age >75', 'frailty CFS >5', 'albumin <30', 'lactate >4 pH <7.3', 'anaemia Hb<80', 'renal GFR <30', 'first nations'];
+  const factors = ['age >75', 'frailty CFS >5', 'albumin <30', 'lactate >4 pH <7.3', 'anaemia Hb <80', 'renal GFR <30', 'first nations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
