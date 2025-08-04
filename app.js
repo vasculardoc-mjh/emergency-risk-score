@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age >75', 'frailty CFS >5', 'albumin <30', 'lactate >4', 'anaemia Hb<80', 'renal GFR <30', 'first nations'];
+  const factors = ['age >75', 'frailty CFS >5', 'albumin <30', 'lactate >4 pH <7.3', 'anaemia Hb<80', 'renal GFR <30', 'first nations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
