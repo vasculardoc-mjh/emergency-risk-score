@@ -36,7 +36,7 @@ function renderApp() {
   const form = document.createElement('div');
   form.className = 'card';
 
-  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anemia', 'renal', 'firstnations'];
+  const factors = ['age', 'frailty', 'albumin', 'lactate', 'anaemia', 'renal', 'first nations'];
   factors.forEach((key) => {
     const row = document.createElement('div');
     row.style.display = 'flex';
@@ -44,7 +44,7 @@ function renderApp() {
     row.style.marginBottom = '0.5rem';
 
     const label = document.createElement('label');
-    label.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace('firstnations', 'First Nations Status');
+    label.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace('first nations', 'First Nations Status');
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
